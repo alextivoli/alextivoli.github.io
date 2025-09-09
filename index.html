@@ -102,8 +102,44 @@
     footer { padding: 2rem 0 4rem; color: var(--muted); }
 
     /* Responsive */
-    @media (max-width: 980px) { .hero { grid-template-columns: 1fr; } .projects .cards { grid-template-columns: 1fr; } .skills .cols { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 640px) { .xp .item, .edu .item { grid-template-columns: 1fr; } .nav ul { display:none; } .nav .menu-btn { display: inline-flex; } }
+    @media (max-width: 980px) { 
+      .hero { grid-template-columns: 1fr; } 
+      .projects .cards { grid-template-columns: 1fr; } 
+      .skills .cols { grid-template-columns: 1fr 1fr; }
+      .about-grid { grid-template-columns: 1fr !important; }
+      .contact-grid { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 768px) {
+      .hero .cta { justify-content: center; text-align: center; }
+      .skills .grid { grid-template-columns: 1fr; }
+      .skills .cols { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr !important; }
+      .contact-grid { grid-template-columns: 1fr !important; }
+      .container { width: 95vw; }
+      .hero { padding: 3rem 0 2rem; text-align: center; }
+      .hero .title { font-size: clamp(1.8rem, 6vw, 2.5rem); }
+    }
+    @media (max-width: 640px) { 
+      .xp .item, .edu .item { grid-template-columns: 1fr; } 
+      .nav ul { display:none; } 
+      .nav .menu-btn { display: inline-flex; }
+      .nav .actions { gap: .4rem; }
+      .btn { padding: .45rem .7rem; font-size: .9rem; }
+      section { padding: 2rem 0; }
+      .hero { padding: 2rem 0 1.5rem; }
+      .hero .subtitle { font-size: 1rem; }
+      .pill { font-size: .85rem; padding: .3rem .5rem; }
+    }
+    @media (max-width: 480px) {
+      .container { width: 92vw; }
+      .hero .cta { flex-direction: column; align-items: center; }
+      .btn { width: 100%; max-width: 280px; justify-content: center; }
+      .nav .brand { font-size: .9rem; }
+      .nav .brand .logo { width: 30px; height: 30px; }
+      .hero .title { font-size: clamp(1.6rem, 7vw, 2.2rem); }
+      .section-title { font-size: 1.3rem; }
+      .tags { justify-content: center; }
+    }
     @media (min-width: 641px) { .nav .menu-btn { display:none; } }
 
     /* Mobile menu */
@@ -168,7 +204,7 @@
 
     <section id="about" class="about" aria-labelledby="about-title">
       <h2 id="about-title" class="section-title">Chi sono</h2>
-      <div class="grid" style="grid-template-columns: 1.1fr .9fr;">
+      <div class="grid about-grid" style="grid-template-columns: 1.1fr .9fr;">
         <div class="card">
           <p>Appassionato di informatica con un focus su <strong>Intelligenza Artificiale</strong> e <strong>Visione Artificiale</strong>, e una particolare passione per la <strong>fotografia</strong>. Spirito collaborativo e orientato al team, facilito la creazione di connessioni significative. Aperto all’innovazione e costantemente alla ricerca di opportunità per migliorare le mie competenze.</p>
           <p>La mia passione per la fotografia riflette creatività e attenzione ai dettagli, qualità che trasferisco nei progetti software.</p>
@@ -355,7 +391,7 @@
 
     <section id="contact" class="contact" aria-labelledby="contact-title">
       <h2 id="contact-title" class="section-title">Contatti</h2>
-      <div class="grid" style="grid-template-columns: 1.1fr .9fr;">
+      <div class="grid contact-grid" style="grid-template-columns: 1.1fr .9fr;">
         <div class="card">
           <p>Ti interessa collaborare o hai un progetto da discutere? Scrivimi o chiamami.</p>
           <div class="list" style="margin-top:.6rem;">
