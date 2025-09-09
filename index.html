@@ -12,6 +12,7 @@
   <meta property="og:image" content="" />
   <meta property="og:url" content="" />
   <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%236aa2ff;stop-opacity:1' /><stop offset='100%' style='stop-color:%238be0d1;stop-opacity:1' /></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23grad)'/><text x='16' y='22' font-family='Arial,sans-serif' font-size='14' font-weight='800' text-anchor='middle' fill='%230b1020'>AT</text></svg>" />
   <style>
     :root {
       --bg: #0b1020;
@@ -50,7 +51,8 @@
     header.site { position: sticky; top: 0; backdrop-filter: saturate(180%) blur(10px); background: color-mix(in srgb, var(--bg) 70%, transparent); border-bottom: 1px solid rgba(255,255,255,.06); z-index: 50; }
     .nav { display: flex; align-items: center; justify-content: space-between; padding: .9rem 0; }
     .nav a.brand { display:flex; gap:.6rem; align-items:center; font-weight:700; color:var(--text); text-decoration:none; letter-spacing:.2px; }
-    .nav a.brand .logo { width: 34px; height:34px; border-radius: 10px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow: var(--shadow); display:flex; align-items:center; justify-content:center; font-weight:800; color:#0b1020; }
+    .nav a.brand .logo { width: 34px; height:34px; border-radius: 10px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow: var(--shadow); display:flex; align-items:center; justify-content:center; font-weight:800; color:#0b1020; overflow: hidden; }
+    .nav a.brand .logo img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
     .nav ul { display:flex; gap: 1rem; list-style:none; margin:0; padding:0; align-items:center; }
     .nav ul a { color: var(--muted); text-decoration:none; font-weight:600; padding:.5rem .8rem; border-radius: 10px; }
     .nav ul a:hover { background: color-mix(in srgb, var(--panel) 60%, transparent); color: var(--text); }
@@ -136,6 +138,7 @@
       .btn { width: 100%; max-width: 280px; justify-content: center; }
       .nav .brand { font-size: .9rem; }
       .nav .brand .logo { width: 30px; height: 30px; }
+      .nav .brand .logo img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
       .hero .title { font-size: clamp(1.6rem, 7vw, 2.2rem); }
       .section-title { font-size: 1.3rem; }
       .tags { justify-content: center; }
@@ -153,7 +156,9 @@
   <header class="site">
     <div class="container nav">
       <a href="#top" class="brand" aria-label="Alex Tivoli">
-        <span class="logo" aria-hidden="true">AT</span>
+        <span class="logo" aria-hidden="true">
+          <img src="mia.jpg" alt="Alex Tivoli" />
+        </span>
         <span>Alex Tivoli</span>
       </a>
       <nav aria-label="Navigazione principale">
@@ -190,7 +195,7 @@
         <p class="subtitle">Laurea Magistrale in Ingegneria Informatica (UNIPR, 2025). Passione per <strong>Intelligenza Artificiale</strong>, <strong>Visione Artificiale</strong> e <strong>fotografia</strong>. Team player, creativo e orientato all’innovazione.</p>
         <div class="cta">
           <a class="btn" href="#contact">Scrivimi</a>
-          <a class="btn secondary" href="cv/Alex_Tivoli_CV.pdf" download>Scarica CV</a>
+          <a class="btn secondary" href="CV_ALEX_TIVOLI.pdf" download>Scarica CV</a>
           <a class="btn secondary" href="https://www.linkedin.com/in/alex-tivoli" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn secondary" href="https://github.com/alextivoli" target="_blank" rel="noopener">GitHub</a>
         </div>
@@ -279,6 +284,19 @@
           </div>
         </div>
         <div class="card item">
+          <div class="meta">Set 2022 – Maggio 2025 · Parma (PR)</div>
+          <div>
+            <div class="role">Software Developer — Maps SpA</div>
+            <ul>
+              <li>Sviluppo <strong>Front‑End</strong> e <strong>Back‑End</strong> del software <strong>Gzoom</strong>.</li>
+              <li>Linguaggi: Java, JavaScript, HTML, CSS.</li>
+              <li>Framework: Angular, Node.js.</li>
+              <li>Versioning collaborativo con Git.</li>
+              <li>Gestione dati: MySQL, PostgreSQL, Oracle.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card item">
           <div class="meta">Apr 2024 – Mag 2024 · Maranello (MO)</div>
           <div>
             <div class="role">Freelancer Web & Social Developer — Italia del Futuro</div>
@@ -290,19 +308,6 @@
               <li>Creazione e gestione di contenuti digitali per social network.</li>
               <li>Implementazione di strategie per aumentare l'interazione sul sito.</li>
               <li>Gestione dati tramite MySQL.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card item">
-          <div class="meta">Set 2022 – Maggio 2025 · Parma (PR)</div>
-          <div>
-            <div class="role">Software Developer — Maps SpA</div>
-            <ul>
-              <li>Sviluppo <strong>Front‑End</strong> e <strong>Back‑End</strong> del software <strong>Gzoom</strong>.</li>
-              <li>Linguaggi: Java, JavaScript, HTML, CSS.</li>
-              <li>Framework: Angular, Node.js.</li>
-              <li>Versioning collaborativo con Git.</li>
-              <li>Gestione dati: MySQL, PostgreSQL, Oracle.</li>
             </ul>
           </div>
         </div>
@@ -398,8 +403,8 @@
             <div>📧 <a href="mailto:alextivoli@icloud.com?subject=Contatto%20dal%20sito">alextivoli@icloud.com</a></div>
             <div>📱 <a href="tel:3934764091">3934764091</a></div>
             <div>🔗 <a href="https://www.linkedin.com/in/alex-tivoli" target="_blank" rel="noopener">linkedin.com/in/alex-tivoli</a></div>
-            <div>� <a href="https://github.com/alextivoli" target="_blank" rel="noopener">github.com/alextivoli</a></div>
-            <div>�📍 Parma, PR — Italia</div>
+            <div>🐙 <a href="https://github.com/alextivoli" target="_blank" rel="noopener">github.com/alextivoli</a></div>
+            <div>📍 Parma, PR — Italia</div>
           </div>
         </div>
         <div class="card">
@@ -444,38 +449,6 @@
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
-    function setTheme(isDark) {
-      if (isDark) {
-        root.setAttribute('data-theme', 'dark');
-        themeBtn.textContent = '☀️';
-        themeBtn.setAttribute('aria-label', 'Cambia a tema chiaro');
-        themeBtn.setAttribute('title', 'Cambia a tema chiaro');
-      } else {
-        root.removeAttribute('data-theme');
-        themeBtn.textContent = '🌙';
-        themeBtn.setAttribute('aria-label', 'Cambia a tema scuro');
-        themeBtn.setAttribute('title', 'Cambia a tema scuro');
-      }
-    }
-    
-    // Set initial theme
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setTheme(true);
-    } else {
-      setTheme(false);
-    }
-    
-    themeBtn?.addEventListener('click', () => {
-      const isDark = root.getAttribute('data-theme') === 'dark';
-      if (isDark) {
-        localStorage.setItem('theme', 'light');
-        setTheme(false);
-      } else {
-        localStorage.setItem('theme', 'dark');
-        setTheme(true);
-      }
-    });
-
     // Current year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
